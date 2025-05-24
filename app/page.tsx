@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Add useEffect
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
@@ -13,10 +13,19 @@ import { Link as ScrollLink } from "react-scroll";
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isStoryExpanded, setIsStoryExpanded] = useState(false); // Track expanded story state
+  const [isStoryExpanded, setIsStoryExpanded] = useState(false);
+  const [scrollOffset, setScrollOffset] = useState(0); // New state for offset
+
+  useEffect(() => {
+    // Calculate offset only on the client side
+    setScrollOffset(typeof window !== "undefined" ? -window.innerHeight / 2 + 50 : 0);
+  }, []);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleStory = () => setIsStoryExpanded(!isStoryExpanded);
-
+  const handleSetActive = (to: string) => {
+    setActiveSection(to);
+  };
   const sections = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
@@ -74,9 +83,6 @@ export default function Home() {
     await loadFull(engine);
   };
 
-  const handleSetActive = (to: string) => {
-    setActiveSection(to);
-  };
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen">
@@ -99,7 +105,7 @@ export default function Home() {
                   duration={500}
                   spy={true}
                   activeClass="active"
-                  offset={-window.innerHeight / 2 + 50}
+                  offset={scrollOffset} // Use dynamic offset
                   onSetActive={handleSetActive}
                   className="text-gray-200 hover:text-cyan-400 transition duration-300 font-medium cursor-pointer"
                 >
@@ -139,8 +145,8 @@ export default function Home() {
                   smooth={true}
                   duration={500}
                   spy={true}
-                  activeClass="active" 
-                  offset={-window.innerHeight / 2 + 50}
+                  activeClass="active"
+                  offset={scrollOffset} // Use dynamic offset
                   onSetActive={handleSetActive}
                   className="block py-2 text-gray-200 hover:text-cyan-400 transition duration-200"
                   onClick={toggleMenu}
@@ -158,7 +164,6 @@ export default function Home() {
           </div>
         )}
       </nav>
-
       <section id="home" className="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
         <Particles
           id="particles"
