@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react"; // Add useEffect
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
@@ -13,22 +13,20 @@ import { Link as ScrollLink } from "react-scroll";
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [isStoryExpanded, setIsStoryExpanded] = useState(false);
-  const [scrollOffset, setScrollOffset] = useState(0); // New state for offset
+  const [scrollOffset, setScrollOffset] = useState(0);
 
   useEffect(() => {
-    // Calculate offset only on the client side
-    setScrollOffset(typeof window !== "undefined" ? -window.innerHeight / 2 + 50 : 0);
+    setScrollOffset(typeof window !== "undefined" ? -window.innerHeight / 2 -200 : 0);
   }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleStory = () => setIsStoryExpanded(!isStoryExpanded);
   const handleSetActive = (to: string) => {
     setActiveSection(to);
   };
   const sections = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
+    { id: "story", label: "My Story" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
@@ -74,15 +72,9 @@ export default function Home() {
     },
   };
 
-  const storyVariants = {
-    hidden: { height: 0, opacity: 0 },
-    visible: { height: "auto", opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } },
-  };
-
   const particlesInit = async (engine: any) => {
     await loadFull(engine);
   };
-
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen">
@@ -105,7 +97,7 @@ export default function Home() {
                   duration={500}
                   spy={true}
                   activeClass="active"
-                  offset={scrollOffset} // Use dynamic offset
+                  offset={scrollOffset}
                   onSetActive={handleSetActive}
                   className="text-gray-200 hover:text-cyan-400 transition duration-300 font-medium cursor-pointer"
                 >
@@ -146,7 +138,7 @@ export default function Home() {
                   duration={500}
                   spy={true}
                   activeClass="active"
-                  offset={scrollOffset} // Use dynamic offset
+                  offset={scrollOffset}
                   onSetActive={handleSetActive}
                   className="block py-2 text-gray-200 hover:text-cyan-400 transition duration-200"
                   onClick={toggleMenu}
@@ -232,31 +224,30 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-8 text-cyan-400">About Me</h2>
           <div className="text-lg leading-relaxed text-gray-200">
             <p>
-              I’m Salman Aji, a Syrian first-generation student at Brown University pursuing dual B.Sc. degrees in
-              Computer Science and Applied Mathematics (GPA: 4.0). As Syria’s 2022 National Valedictorian, I’m passionate
-              about leveraging AI to solve challenges in healthcare, education, and social justice. My work spans
-              AI-augmented database systems, multi-agent learning, and community-driven tech initiatives. With awards from
-              the International Physics Olympiad and Mathematical Modeling Challenge, I aim to build bridges across
-              disciplines and communities.
+            I’m Salman Aji, a Syrian first-generation student at Brown University, studying Computer Science and Applied Math. 
             </p>
-            <div className="mt-6 text-center">
-              <button
-                onClick={toggleStory}
-                className="inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full transition shadow-lg hover:shadow-cyan-500/50"
-              >
-                {isStoryExpanded ? "Hide My Story" : "Learn More About My Story"}
-              </button>
-            </div>
-            <motion.div
-              variants={storyVariants}
-              initial="hidden"
-              animate={isStoryExpanded ? "visible" : "hidden"}
-              className="mt-4 overflow-hidden"
-            >
-              <p className="text-lg leading-relaxed text-gray-200">
-                Growing up in Syria, I witnessed firsthand the challenges of limited access to education and healthcare. These experiences fueled my drive to pursue a career in technology, where I could create solutions with global impact. At Brown, I’ve immersed myself in interdisciplinary projects, from developing AI tools for medical research to advocating for equitable tech policies. My journey as a first-generation student has taught me resilience and the importance of community, values I bring to every project and collaboration. Whether it’s mentoring peers or building AI-driven platforms, I’m committed to using technology as a force for positive change.
-              </p>
-            </motion.div>
+            <br></br>
+            <p>
+            I care about using tech to help people. Whether it’s building tools to make education more fair or exploring how AI can improve healthcare, I want my work to have real impact. At Brown, I’m part of Full Stack, where I work on projects beyond class, and I’ve led community efforts shaped by where I come from and what I care about.
+            </p>
+            <br></br>
+            <p>
+            Still, not everything I do is on a screen. I love being outside, hiking, kayaking, anything that lets me breathe. I enjoy slow mornings and making matcha (the whisking is calming), and I’m always trying to pick up a new language. I like sharing my culture and food, and one of my favorite things is karaoke night with my friends.
+            </p>
+          </div>
+        </motion.div>
+      </section>
+
+      <section id="story" className="py-20 px-6 max-w-5xl mx-auto">
+        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <h2 className="text-4xl font-bold text-center mb-8 text-cyan-400">My Story</h2>
+          <div className="text-lg leading-relaxed text-gray-200">
+            <p>
+            The first time I wrote "Hello, World," I was in 10th grade, surrounded by a world that felt like it was falling apart. War had stolen the rhythm of my life: schools closed, power gone, plans abandoned. But in that quiet moment, alone with a borrowed laptop and a low battery, I typed two words and hit run. The screen replied: Hello, World. It was the first time in a long time something answered back.
+            That moment changed me. I realized I could still build something, yeah it was small, but it was mine. When everything around me was uncertain, coding made sense. It wasn’t just about solving problems, it was about finding stability. It was the first time I felt in control, the first time I saw a future I could shape with my own hands
+            Since then, I haven’t stopped. I code because it gave me my voice back. I code because it helps me build something better, for myself, for the people I care about, and even for those I may never meet. Every line of code is my way of saying I still believe in the future.
+            I code because it makes me feel alive. Because when the world said no, I learned to build my own yes. That feeling has stayed with me. And I know it always will.
+            </p>
           </div>
         </motion.div>
       </section>
@@ -333,7 +324,6 @@ export default function Home() {
                 Building a website for 1000+ international students at Brown with an AI chatbot trained on Brown-specific data to ease their U.S. transition.
               </p>
             </motion.div>
-            
             <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
               <Image
                 src="/projects/Blackjack_Assistant.jpg"
@@ -358,9 +348,9 @@ export default function Home() {
               </div>
               <p className="text-sm text-gray-300">Python, roboflow, OpenCV • March - May 2025</p>
               <p className="mt-2 text-sm text-gray-200">
-              Developed a real-time Blackjack strategy assistant using a YOLOv8 model trained on 10,000 images to detect player and dealer hands. Employed DBSCAN to cluster hand combinations and applied reinforcement learning to recommend optimal actions (hit, stay, double, or split). Provides instant feedback based on the detected cards, enhancing decision-making in live gameplay.              </p>
+                Developed a real-time Blackjack strategy assistant using a YOLOv8 model trained on 10,000 images to detect player and dealer hands. Employed DBSCAN to cluster hand combinations and applied reinforcement learning to recommend optimal actions (hit, stay, double, or split). Provides instant feedback based on the detected cards, enhancing decision-making in live gameplay.
+              </p>
             </motion.div>
-                       
             <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
               <Image
                 src="/projects/go-gameplay.jpg"
@@ -466,10 +456,9 @@ export default function Home() {
               </div>
               <p className="text-sm text-gray-300">Python, OpenCV, Tkinter, SQLite • Jan - Feb 2024</p>
               <p className="mt-2 text-sm text-gray-200">
-              Designed a Python-based Attendance Tracker using Tkinter for the UI and OpenCV for face recognition, streamlining attendance for clubs and small classes. Enabled real-time user registration and automated emailing of absent or late students. Stored attendance records in SQLite for reliable data management.
+                Designed a Python-based Attendance Tracker using Tkinter for the UI and OpenCV for face recognition, streamlining attendance for clubs and small classes. Enabled real-time user registration and automated emailing of absent or late students. Stored attendance records in SQLite for reliable data management.
               </p>
             </motion.div>
-
             <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
               <Image
                 src="/projects/GameHub.jpg"
@@ -492,9 +481,9 @@ export default function Home() {
                   </svg>
                 </motion.a>
               </div>
-              <p className="text-sm text-gray-300">Java, JavaFx, SQLite• Nov - Dec 2023</p>
+              <p className="text-sm text-gray-300">Java, JavaFx, SQLite • Nov - Dec 2023</p>
               <p className="mt-2 text-sm text-gray-200">
-              Developed a Java-based Game Center app featuring Othello, Doodle Jump, and Tetris with custom graphics. Implemented Othello using Minimax with alpha-beta pruning, supporting three difficulty levels and human players. Built Tetris and Doodle Jump using JavaFX for mechanics and visuals. Created a leaderboard system with CSV files, enabling 25+ friends to compete for high scores.
+                Developed a Java-based Game Center app featuring Othello, Doodle Jump, and Tetris with custom graphics. Implemented Othello using Minimax with alpha-beta pruning, supporting three difficulty levels and human players. Built Tetris and Doodle Jump using JavaFX for mechanics and visuals. Created a leaderboard system with CSV files, enabling 25+ friends to compete for high scores.
               </p>
             </motion.div>
           </div>
@@ -572,13 +561,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="mt-8 text-center">
-            <h3 className="text-xl font-semibold text-cyan-400">Interests & Awards</h3>
-            <p className="text-sm text-gray-200 mt-2">
-              Interests: Linguistics, Social Justice, Music, Kayaking, AI Policy<br />
-              Awards: National Valedictorian of Syria (2022), Honorable Mention in International Physics Olympiad, Honorable Mention in International Mathematical Modeling Challenge
-            </p>
-          </div>
+
         </motion.div>
       </section>
 
