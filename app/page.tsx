@@ -10,6 +10,38 @@ import { BsCodeSlash, BsGear } from "react-icons/bs";
 import { FaDatabase, FaBook, FaGraduationCap, FaLanguage } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 
+
+const GitHubIcon = () => (
+  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 
+      3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+      0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61
+      -.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 
+      1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 
+      3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 
+      0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 
+      0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 
+      3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 
+      3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176 
+      .765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 
+      5.625-5.475 5.92.42.36.81 1.096.81 2.22 
+      0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57 
+      C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+  </svg>
+);
+
+  const YouTubeIcon = () => (
+    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M23.498 6.186a2.951 2.951 0 0 0-2.077-2.088C19.505 3.5 
+        12 3.5 12 3.5s-7.505 0-9.421.598A2.951 2.951 0 0 0 
+        .502 6.186C0 8.11 0 12 0 12s0 3.89.502 5.814a2.951 
+        2.951 0 0 0 2.077 2.088C4.495 20.5 12 20.5 12 
+        20.5s7.505 0 9.421-.598a2.951 2.951 0 0 0 
+        2.077-2.088C24 15.89 24 12 24 12s0-3.89-.502-5.814zM9.75 
+        15.02V8.98l6.25 3.02-6.25 3.02z" />
+    </svg>
+  );
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -213,7 +245,7 @@ export default function Home() {
               href="/CV.pdf"
               className="mt-6 inline-block px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full transition shadow-lg hover:shadow-cyan-500/50"
             >
-              View Resume
+              Resume
             </a>
           </div>
         </motion.div>
@@ -245,6 +277,8 @@ export default function Home() {
             <p>
             The first time I wrote "Hello, World," I was in 10th grade, surrounded by a world that felt like it was falling apart. War had stolen the rhythm of my life: schools closed, power gone, plans abandoned. But in that quiet moment, alone with a borrowed laptop and a low battery, I typed two words and hit run. The screen replied: Hello, World. It was the first time in a long time something answered back.
             That moment changed me. I realized I could still build something, yeah it was small, but it was mine. When everything around me was uncertain, coding made sense. It wasn’t just about solving problems, it was about finding stability. It was the first time I felt in control, the first time I saw a future I could shape with my own hands
+            <br></br>
+            <br></br>
             Since then, I haven’t stopped. I code because it gave me my voice back. I code because it helps me build something better, for myself, for the people I care about, and even for those I may never meet. Every line of code is my way of saying I still believe in the future.
             I code because it makes me feel alive. Because when the world said no, I learned to build my own yes. That feeling has stayed with me. And I know it always will.
             </p>
@@ -294,201 +328,165 @@ export default function Home() {
       </section>
 
       <section id="projects" className="py-20 px-6 max-w-6xl mx-auto">
-        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <h2 className="text-4xl font-bold text-center mb-10 text-cyan-400">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <Image
-                src="/projects/brunos-compass.jpg"
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                alt="Bruno’s Compass"
-              />
-              <div className="flex justify-between items-center">
-                <h3 className="text-xl font-semibold text-cyan-400">Bruno’s Compass</h3>
-                <motion.a
-                  href="https://github.com/saji802/brunos-compass"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2 }}
-                  className="text-gray-400"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg>
-                </motion.a>
-              </div>
-              <p className="text-sm text-gray-300">Java, TypeScript, React, HTML, CSS, JUnit • Ongoing</p>
-              <p className="mt-2 text-sm text-gray-200">
-                Building a website for 1000+ international students at Brown with an AI chatbot trained on Brown-specific data to ease their U.S. transition.
-              </p>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <Image
-                src="/projects/Blackjack_Assistant.jpg"
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                alt="Blackjack Assistant"
-              />
-              <div className="flex justify-between items-center">
-                <h3 className="text-xl font-semibold text-cyan-400">Blackjack Assistant</h3>
-                <motion.a
-                  href="https://github.com/saji802/Blackjack_Assistant"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2 }}
-                  className="text-gray-400"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg>
-                </motion.a>
-              </div>
-              <p className="text-sm text-gray-300">Python, roboflow, OpenCV • March - May 2025</p>
-              <p className="mt-2 text-sm text-gray-200">
-                Developed a real-time Blackjack strategy assistant using a YOLOv8 model trained on 10,000 images to detect player and dealer hands. Employed DBSCAN to cluster hand combinations and applied reinforcement learning to recommend optimal actions (hit, stay, double, or split). Provides instant feedback based on the detected cards, enhancing decision-making in live gameplay.
-              </p>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <Image
-                src="/projects/go-gameplay.jpg"
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                alt="Multi-Agent Framework for Go Gameplay"
-              />
-              <div className="flex justify-between items-center">
-                <h3 className="text-xl font-semibold text-cyan-400">Multi-Agent Framework for Go Gameplay</h3>
-                <motion.a
-                  href="https://github.com/saji802/go-gameplay"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2 }}
-                  className="text-gray-400"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg>
-                </motion.a>
-              </div>
-              <p className="text-sm text-gray-300">Python • Sep - Dec 2024</p>
-              <p className="mt-2 text-sm text-gray-200">
-                Developed AI agents using MCTS, Q-learning, and deep learning, achieving an ELO rating of 1700 and winning a class-wide tournament against 65+ competitors.
-              </p>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <Image
-                src="/projects/compact-os.jpg"
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                alt="Compact Operating System"
-              />
-              <div className="flex justify-between items-center">
-                <h3 className="text-xl font-semibold text-cyan-400">Compact Operating System</h3>
-                <motion.a
-                  href="https://github.com/saji802/compact-os"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2 }}
-                  className="text-gray-400"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg>
-                </motion.a>
-              </div>
-              <p className="text-sm text-gray-300">C, C++, Git • Feb - Mar 2024</p>
-              <p className="mt-2 text-sm text-gray-200">
-                Built a small OS with process creation, system calls, and kernel-managed virtual memory using page tables.
-              </p>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <Image
-                src="/projects/vocablo.jpg"
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                alt="Vocablo: Vocabulary Tracker Web App"
-              />
-              <div className="flex justify-between items-center">
-                <h3 className="text-xl font-semibold text-cyan-400">Vocablo: Vocabulary Tracker Web App</h3>
-                <motion.a
-                  href="https://github.com/saji802/vocablo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2 }}
-                  className="text-gray-400"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg>
-                </motion.a>
-              </div>
-              <p className="text-sm text-gray-300">TypeScript, Firebase, Next.js, Playwright, Clerk • Jan - Feb 2024</p>
-              <p className="mt-2 text-sm text-gray-200">
-                Created an AI-powered language learning app for Spanish learners at Brown, featuring thematic word clustering and progress tracking.
-              </p>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <Image
-                src="/projects/Attendance_Tracker.jpg"
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                alt="Attendance Tracker"
-              />
-              <div className="flex justify-between items-center">
-                <h3 className="text-xl font-semibold text-cyan-400">Attendance Tracker</h3>
-                <motion.a
-                  href="https://github.com/saji802/Attendance-Trackerr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2 }}
-                  className="text-gray-400"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg>
-                </motion.a>
-              </div>
-              <p className="text-sm text-gray-300">Python, OpenCV, Tkinter, SQLite • Jan - Feb 2024</p>
-              <p className="mt-2 text-sm text-gray-200">
-                Designed a Python-based Attendance Tracker using Tkinter for the UI and OpenCV for face recognition, streamlining attendance for clubs and small classes. Enabled real-time user registration and automated emailing of absent or late students. Stored attendance records in SQLite for reliable data management.
-              </p>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <Image
-                src="/projects/GameHub.jpg"
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-                alt="GameHub"
-              />
-              <div className="flex justify-between items-center">
-                <h3 className="text-xl font-semibold text-cyan-400">GameHub</h3>
-                <motion.a
-                  href="https://github.com/saji802/GameHub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.2 }}
-                  className="text-gray-400"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                  </svg>
-                </motion.a>
-              </div>
-              <p className="text-sm text-gray-300">Java, JavaFx, SQLite • Nov - Dec 2023</p>
-              <p className="mt-2 text-sm text-gray-200">
-                Developed a Java-based Game Center app featuring Othello, Doodle Jump, and Tetris with custom graphics. Implemented Othello using Minimax with alpha-beta pruning, supporting three difficulty levels and human players. Built Tetris and Doodle Jump using JavaFX for mechanics and visuals. Created a leaderboard system with CSV files, enabling 25+ friends to compete for high scores.
-              </p>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
+      
+
+  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+    <h2 className="text-4xl font-bold text-center mb-10 text-cyan-400">Projects</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <Image src="/projects/brunos-compass.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Bruno’s Compass" />
+        <h3 className="text-xl font-semibold text-cyan-400 mb-2">Bruno’s Compass</h3>
+        <div className="flex gap-6 mt-2">
+          <motion.a href="https://github.com/saji802/brunos-compass" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <GitHubIcon />
+          <span className="text-sm">Code</span>
+          </motion.a>
+          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_1" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <YouTubeIcon />
+          <span className="text-sm">Demo</span>
+          </motion.a>
+        </div>
+        <p className="text-sm text-gray-300 mt-4">Java, TypeScript, React, HTML, CSS, JUnit • Ongoing</p>
+        <ul className="mt-2 text-sm text-gray-200 list-disc ml-5">
+          <li>Built a site for 1000+ international students at Brown.</li>
+          <li>Integrated AI chatbot trained on Brown-specific data.</li>
+          <li>Helps with campus life and transition to the U.S.</li>
+        </ul>
+      </motion.div>
+
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <Image src="/projects/Blackjack_Assistant.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Blackjack Assistant" />
+        <h3 className="text-xl font-semibold text-cyan-400 mb-2">Blackjack Assistant</h3>
+        <div className="flex gap-6 mt-2">
+          <motion.a href="https://github.com/saji802/Blackjack_Assistant" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <GitHubIcon />
+          <span className="text-sm">Code</span>
+          </motion.a>
+          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+            <YouTubeIcon />
+<span className="text-sm">Demo</span>
+          </motion.a>
+        </div>
+        <p className="text-sm text-gray-300 mt-4">Python, roboflow, OpenCV • March - May 2025</p>
+        <ul className="mt-2 text-sm text-gray-200 list-disc ml-5">
+          <li>Trained YOLOv8 on 10,000+ card images.</li>
+          <li>Used DBSCAN to cluster hand types.</li>
+          <li>Reinforcement learning suggests optimal moves.</li>
+        </ul>
+      </motion.div>
+
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <Image src="/projects/go-gameplay.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Multi-Agent Framework for Go Gameplay" />
+        <h3 className="text-xl font-semibold text-cyan-400 mb-2">Multi-Agent Framework for Go Gameplay</h3>
+        <div className="flex gap-6 mt-2">
+          <motion.a href="https://github.com/saji802/go-gameplay" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <GitHubIcon />
+          <span className="text-sm">Code</span>
+          </motion.a>
+          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+            <YouTubeIcon />
+            <span className="text-sm">Demo</span>
+          </motion.a>
+        </div>
+        <p className="text-sm text-gray-300 mt-4">Python • Sep - Dec 2024</p>
+        <ul className="mt-2 text-sm text-gray-200 list-disc ml-5">
+          <li>Built agents using MCTS, Q-learning, and deep learning.</li>
+          <li>Reached 1700 ELO rating.</li>
+          <li>Won class tournament with 65+ participants.</li>
+        </ul>
+      </motion.div>
+
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <Image src="/projects/compact-os.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Compact Operating System" />
+        <h3 className="text-xl font-semibold text-cyan-400 mb-2">Compact Operating System</h3>
+        <div className="flex gap-6 mt-2">
+          <motion.a href="https://github.com/saji802/compact-os" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <GitHubIcon />
+        <span className="text-sm">Code</span>
+          </motion.a>
+          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_4" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <YouTubeIcon />
+          <span className="text-sm">Demo</span>
+          </motion.a>
+        </div>
+        <p className="text-sm text-gray-300 mt-4">C, C++, Git • Feb - Mar 2024</p>
+        <ul className="mt-2 text-sm text-gray-200 list-disc ml-5">
+          <li>Built small OS from scratch with custom memory management.</li>
+          <li>Implemented page tables and system calls.</li>
+          <li>Supported process creation and virtual memory.</li>
+        </ul>
+      </motion.div>
+
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <Image src="/projects/vocablo.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Vocablo" />
+        <h3 className="text-xl font-semibold text-cyan-400 mb-2">Vocablo: Vocabulary Tracker Web App</h3>
+        <div className="flex gap-6 mt-2">
+          <motion.a href="https://github.com/saji802/vocablo" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <GitHubIcon />
+          <span className="text-sm">Code</span>
+          </motion.a>
+          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_5" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <YouTubeIcon />
+          <span className="text-sm">Demo</span>
+          </motion.a>
+        </div>
+        <p className="text-sm text-gray-300 mt-4">TypeScript, Firebase, Next.js, Playwright, Clerk • Jan - Feb 2024</p>
+        <ul className="mt-2 text-sm text-gray-200 list-disc ml-5">
+          <li>Created AI-powered Spanish vocabulary tracker.</li>
+          <li>Clustered words by theme and usage.</li>
+          <li>Included progress visualization and authentication.</li>
+        </ul>
+      </motion.div>
+
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <Image src="/projects/Attendance_Tracker.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Attendance Tracker" />
+        <h3 className="text-xl font-semibold text-cyan-400 mb-2">Attendance Tracker</h3>
+        <div className="flex gap-6 mt-2">
+          <motion.a href="https://github.com/saji802/Attendance-Tracker" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <GitHubIcon />
+          <span className="text-sm">Code</span>
+          </motion.a>
+          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_6" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <YouTubeIcon />
+          <span className="text-sm">Demo</span>
+          </motion.a>
+        </div>
+        <p className="text-sm text-gray-300 mt-4">Python, OpenCV, Tkinter, SQLite • Jan - Feb 2024</p>
+        <ul className="mt-2 text-sm text-gray-200 list-disc ml-5">
+          <li>Developed GUI attendance app with face recognition.</li>
+          <li>Integrated SQLite for logging and reporting.</li>
+          <li>Automated absence and lateness email reports.</li>
+        </ul>
+      </motion.div>
+
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <Image src="/projects/GameHub.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="GameHub" />
+        <h3 className="text-xl font-semibold text-cyan-400 mb-2">GameHub</h3>
+        <div className="flex gap-6 mt-2">
+          <motion.a href="https://github.com/saji802/GameHub" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <GitHubIcon />
+          <span className="text-sm">Code</span>
+          </motion.a>
+          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_7" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <YouTubeIcon />
+          <span className="text-sm">Demo</span>
+          </motion.a>
+        </div>
+        <p className="text-sm text-gray-300 mt-4">Java, JavaFx, SQLite • Nov - Dec 2023</p>
+        <ul className="mt-2 text-sm text-gray-200 list-disc ml-5">
+          <li>Created game hub with Othello, Tetris, and Doodle Jump.</li>
+          <li>Used JavaFX for visual interface and animations.</li>
+          <li>Built leaderboard using local CSV data.</li>
+        </ul>
+      </motion.div>
+
+    </div>
+  </motion.div>
+</section>
+
+
+
 
       <section id="skills" className="py-20 px-6 bg-gray-900/50">
         <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -573,8 +571,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-start max-w-3xl mx-auto">
             <div className="space-y-6">
               <div>
-                <h3 className="text-lg font-semibold text-gray-300">Address</h3>
-                <p className="text-gray-400">
+                <h3 className="text-2xl font-semibold text-gray-00">Address</h3>
+                <p className="text-lg text-gray-400">
                   Brown University<br />
                   69 Brown St<br />
                   Providence, RI 02912<br />
@@ -582,14 +580,14 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-300">Email</h3>
-                <p className="text-gray-400 border-b border-dashed border-gray-500 inline-block">
+                <h3 className="text-2xl font-semibold text-gray-300">Email</h3>
+                <p className="text-lg text-gray-400 border-b border-dashed border-gray-500 inline-block">
                   salman_aji@brown.edu
                 </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-300">Phone</h3>
-                <p className="text-gray-400">+1 (401) 688-8211</p>
+                <h3 className="text-2xl font-semibold text-gray-300">Phone</h3>
+                <p className="text-lg text-gray-400">+1 (401) 688-8211</p>
               </div>
             </div>
             <div className="flex flex-col items-center space-y-4 mt-6 md:mt-0">
@@ -600,10 +598,12 @@ export default function Home() {
                 whileHover={{ scale: 1.2, color: "#00FFFF" }}
                 className="text-gray-400 transition-colors duration-300"
               >
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-18 h-18" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
                 </svg>
               </motion.a>
+              <br></br>
+              <br></br>
               <motion.a
                 href="https://linkedin.com/in/salman-aji1"
                 target="_blank"
@@ -611,7 +611,7 @@ export default function Home() {
                 whileHover={{ scale: 1.2, color: "#00FFFF" }}
                 className="text-gray-400 transition-colors duration-300"
               >
-                <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-18 h-18" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
               </motion.a>
