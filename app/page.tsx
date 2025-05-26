@@ -188,68 +188,67 @@ export default function Home() {
           </div>
         )}
       </nav>
-      <section id="home" className="h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden">
-        <Particles
-          id="particles"
-          init={particlesInit}
-          options={{
-            particles: {
-              color: { value: "#00FFFF" },
-              links: { color: "#00FFFF", enable: true, opacity: 0.3 },
-              move: { enable: true, speed: 1.5 },
-              size: { value: 2 },
-              number: { value: 50 },
-            },
-            background: { color: { value: "transparent" } },
-          }}
-          className="absolute inset-0 -z-10"
-        />
-        <motion.div
-          className="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-5xl"
-          variants={fadeInUp}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div whileHover={{ scale: 1.05 }} className="relative">
-            <Image
-              src="/profile.jpg"
-              width={220}
-              height={220}
-              className="rounded-full border-4 border-cyan-500 shadow-xl"
-              alt="Salman Aji"
-            />
-            <div className="absolute inset-0 rounded-full bg-cyan-500/20 animate-pulse" />
-          </motion.div>
-          <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 to-pink-500 text-transparent bg-clip-text">
-              Salman Aji
-            </h1>
-            <p className="mt-4 text-xl md:text-2xl text-gray-300">
-              Computer Science & Applied Math @ Brown University
-            </p>
-            <TypeAnimation
-              sequence={[
-                "AI Innovator",
-                2000,
-                "Healthcare Tech Enthusiast",
-                2000,
-                "Social Justice Advocate",
-                2000,
-              ]}
-              wrapper="span"
-              speed={40}
-              className="mt-3 block text-cyan-400 text-lg md:text-xl font-semibold"
-              repeat={Infinity}
-            />
-            <a
-              href="/CV.pdf"
-              className="mt-6 inline-block px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full transition shadow-lg hover:shadow-cyan-500/50"
-            >
-              Resume
-            </a>
-          </div>
-        </motion.div>
-      </section>
+      <section id="home" className="h-screen flex items-center px-6 md:px-20 relative overflow-hidden bg-transparent">
+  <Particles
+    id="particles"
+    init={particlesInit}
+    options={{
+      particles: {
+        color: { value: "#00FFFF" },
+        links: { color: "#00FFFF", enable: true, opacity: 0.3 },
+        move: { enable: true, speed: 1.2 },
+        size: { value: 2 },
+        number: { value: 50 },
+      },
+      background: { color: { value: "transparent" } },
+    }}
+    className="absolute inset-0 -z-10"
+  />
+
+  <motion.div
+    className="flex flex-col-reverse md:flex-row justify-between items-center w-full max-w-6xl mx-auto gap-12"
+    variants={fadeInUp}
+    initial="hidden"
+    animate="visible"
+  >
+    {/* Left: Details */}
+    <div className="text-center md:text-left flex flex-col items-center md:items-start flex-1">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 to-pink-500 text-transparent bg-clip-text">
+        Salman Aji
+      </h1>
+      <p className="mt-4 text-lg md:text-xl text-gray-300">
+        Computer Science & Applied Math @ Brown University
+      </p>
+      <TypeAnimation
+        sequence={[
+          "Cout<< 'Hello World!'; ", 2000,
+          "for (dream in life) { build(dream); }", 2000,
+          "while (!success) tryAgain();", 2000,
+        ]}
+        wrapper="span"
+        speed={40}
+        className="mt-3 text-cyan-400 text-base md:text-lg font-medium"
+        repeat={Infinity}
+      />
+      <a
+        href="/CV.pdf"
+        className="mt-6 inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full transition shadow-lg hover:shadow-cyan-500/50"
+      >
+        Resume
+      </a>
+    </div>
+
+    <motion.div whileHover={{ scale: 1.05 }} className="relative w-64 h-64 md:w-100 md:h-100">
+      <Image
+        src="/profile.jpg"
+        fill
+        className="rounded-full object-cover border-4 border-cyan-500 shadow-xl"
+        alt="Salman Aji"
+      />
+    </motion.div>
+  </motion.div>
+</section>
+
 
       <section id="about" className="py-20 px-6 max-w-5xl mx-auto">
         <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
