@@ -377,7 +377,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/go-gameplay.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Multi-Agent Framework for Go Gameplay" />
+        <Image src="/projects/goAgents.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Multi-Agent Framework for Go Gameplay" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Multi-Agent Framework for Go Gameplay</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/go-gameplay" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -398,7 +398,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/compact-os.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Compact Operating System" />
+        <Image src="/projects/OS.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Compact Operating System" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Compact Operating System</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/compact-os" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -419,7 +419,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/vocablo.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Vocablo" />
+        <Image src="/projects/Vocablo.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Vocablo" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Vocablo: Vocabulary Tracker Web App</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/vocablo" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -461,7 +461,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/GameHub.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="GameHub" />
+      <Image src="/projects/GameHub.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="GameHub" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">GameHub</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/GameHub" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
