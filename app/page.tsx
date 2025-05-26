@@ -334,7 +334,7 @@ export default function Home() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/Bruno.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Bruno’s Compass" />
+        <Image src="/projects/Bruno.jpg" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Bruno’s Compass" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Bruno’s Compass</h3>
 
         <p className="text-sm text-gray-300 mt-4">Java, TypeScript, React, HTML, CSS, JUnit • Ongoing</p>
@@ -346,7 +346,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/Blackjack_Assistant.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Blackjack Assistant" />
+        <Image src="/projects/Blackjack_Assistant.jpg"  width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Blackjack Assistant" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Blackjack Assistant</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/Blackjack_Assistant" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -367,7 +367,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/goAgents.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Multi-Agent Framework for Go Gameplay" />
+        <Image src="/projects/Go.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Multi-Agent Framework for Go Gameplay" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Multi-Agent Framework for Go Gameplay</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/go-gameplay" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -430,7 +430,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/Attendance_Tracker.jpg" width={300} height={200} className="w-full h-48 object-cover rounded-lg mb-4" alt="Attendance Tracker" />
+        <Image src="/projects/Attendance_Tracker.jpg" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Attendance Tracker" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Attendance Tracker</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/Attendance-Tracker" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
