@@ -346,7 +346,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/Blackjack_Assistant.jpg"  width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Blackjack Assistant" />
+        <Image src="/projects/BlackJack.png"  width={400} height={200} className="w-full h-90 object-contain rounded-lg mb-4" alt="Blackjack Assistant" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Blackjack Assistant</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/Blackjack_Assistant" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -367,7 +367,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/Go.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Multi-Agent Framework for Go Gameplay" />
+        <Image src="/projects/Go.png" width={400} height={200} className="w-full h-90 object-contain rounded-lg mb-4" alt="Multi-Agent Framework for Go Gameplay" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Multi-Agent Framework for Go Gameplay</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/go-gameplay" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -395,7 +395,7 @@ export default function Home() {
           <GitHubIcon />
         <span className="text-sm">Code</span>
           </motion.a>
-          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_4" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <motion.a href="https://youtu.be/bq7jYzlqsXQ" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <YouTubeIcon />
           <span className="text-sm">Demo</span>
           </motion.a>
@@ -409,7 +409,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/Vocablo.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Vocablo" />
+        <Image src="/projects/Vocablo.png" width={400} height={200} className="w-full h-90 object-contain rounded-lg mb-4" alt="Vocablo" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Vocablo: Vocabulary Tracker Web App</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/vocablo" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -430,7 +430,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-        <Image src="/projects/Attendance_Tracker.jpg" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Attendance Tracker" />
+        <Image src="/projects/Tracker.png" width={400} height={200} className="w-full h-90 object-contain rounded-lg mb-4" alt="Attendance Tracker" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Attendance Tracker</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/Attendance-Tracker" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
@@ -451,7 +451,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-      <Image src="/projects/GameHub.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="GameHub" />
+      <Image src="/projects/GameHub.png" width={400} height={200} className="w-full h-90 object-contain rounded-lg mb-4" alt="GameHub" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">GameHub</h3>
         <div className="flex gap-6 mt-2">
           <motion.a href="https://github.com/saji802/GameHub" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
