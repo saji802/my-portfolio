@@ -212,62 +212,80 @@ export default function Home() {
     animate="visible"
   >
     {/* Left: Details */}
-    <div className="text-center md:text-left flex flex-col items-center md:items-start flex-1">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-cyan-400 to-pink-500 text-transparent bg-clip-text">
-        Salman Aji
-      </h1>
-      <p className="mt-4 text-lg md:text-xl text-gray-300">
-        Computer Science & Applied Math @ Brown University
-      </p>
-      <TypeAnimation
-        sequence={[
-          "Cout<< 'Hello World!'; ", 2000,
-          "for (dream in life) { build(dream); }", 2000,
-          "while (!success) tryAgain();", 2000,
-        ]}
-        wrapper="span"
-        speed={40}
-        className="mt-3 text-cyan-400 text-base md:text-lg font-medium"
-        repeat={Infinity}
-      />
-      <a
-        href="/CV.pdf"
-        className="mt-6 inline-block px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-full transition shadow-lg hover:shadow-cyan-500/50"
-      >
-        Resume
-      </a>
-    </div>
+    <div className="text-center md:text-left flex flex-col items-center md:items-start flex-1 max-w-3xl">
+  <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 to-pink-500 text-transparent bg-clip-text">
+    Hi, I'm Salman
+  </h1>
+  <p className="mt-2 text-lg text-gray-400 italic">/sal·man/</p>
 
-    <motion.div whileHover={{ scale: 1.05 }} className="relative w-64 h-64 md:w-100 md:h-100">
-      <Image
-        src="/profile.jpg"
-        fill
-        className="rounded-full object-cover border-4 border-cyan-500 shadow-xl"
-        alt="Salman Aji"
-      />
-    </motion.div>
+  <p className="mt-6 text-xl md:text-2xl text-gray-200 leading-snug">
+    A rising junior studying <span className="text-cyan-400 font-semibold">Computer Science</span> & <span className="text-cyan-400 font-semibold">Applied Math</span> @ Brown University.
+  </p>
+  <p className="mt-2 text-lg md:text-xl text-gray-400">
+  I love building things that make opportunities more accessible to others.
+  </p>
+
+  <TypeAnimation
+    sequence={[
+      "Cout << I love cats 🐱!'; ", 2000,
+      "for (dream in life) { build(dream); }", 2000,
+      "while (!success) tryAgain();", 2000
+    ]}
+    wrapper="span"
+    speed={40}
+    className="mt-4 text-cyan-400 text-base md:text-lg font-medium"
+    repeat={Infinity}
+  />
+
+  <a
+    href="/CV.pdf"
+    className="mt-8 inline-block px-7 py-3 text-lg bg-cyan-600 hover:bg-cyan-700 text-white rounded-full transition shadow-lg hover:shadow-cyan-500/50"
+  >
+    View My Resume
+  </a>
+</div>
+
+<motion.div whileHover={{ scale: 1.05 }} className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] mt-8 md:mt-0">
+  <Image
+    src="/profile.jpg"
+    fill
+    className="rounded-full object-cover border-4 border-cyan-500 shadow-xl"
+    alt="Salman Aji"
+  />
+</motion.div>
+
   </motion.div>
 </section>
 
 
-      <section id="about" className="py-20 px-6 max-w-5xl mx-auto">
-        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <h2 className="text-4xl font-bold text-center mb-8 text-cyan-400">About Me</h2>
-          <div className="text-lg leading-relaxed text-gray-200">
-            <p>
-            I’m Salman Aji, a Syrian first-generation student at Brown University, studying Computer Science and Applied Math. 
-            </p>
-            <br></br>
-            <p>
-            I care about using tech to help people. Whether it’s building tools to make education more fair or exploring how AI can improve healthcare, I want my work to have real impact. At Brown, I’m part of Full Stack, where I work on projects beyond class, and I’ve led community efforts shaped by where I come from and what I care about.
-            </p>
-            <br></br>
-            <p>
-            Still, not everything I do is on a screen. I love being outside, hiking, kayaking, anything that lets me breathe. I enjoy slow mornings and making matcha (the whisking is calming), and I’m always trying to pick up a new language. I like sharing my culture and food, and one of my favorite things is karaoke night with my friends.
-            </p>
-          </div>
-        </motion.div>
-      </section>
+<section id="about" className="py-20 px-6 max-w-5xl mx-auto">
+  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+    <h2 className="text-4xl font-bold text-center mb-8 text-cyan-400">About Me</h2>
+    <div className="text-lg leading-relaxed text-gray-200 space-y-6">
+
+      <p>
+        I’m <span className="font-semibold text-white">Salman Aji</span>, a Syrian first-generation student at
+        <span className="bg-purple-700/70 text-white px-2 py-0.5 rounded ml-1 mr-1">Brown University</span>,
+        studying <span className="bg-green-700/70 text-white px-2 py-0.5 rounded">Computer Science</span> and <span className="bg-green-800/70 text-white px-2 py-0.5 rounded">Applied Math</span>.
+      </p>
+
+      <p>
+        I care about using tech to help people. Whether it’s building tools to make education more fair or exploring how AI can improve healthcare, I want my work to have real impact. At Brown, I’m part of
+        <span className="bg-blue-700/70 text-white px-2 py-0.5 rounded ml-1">Full Stack</span>, where I work on projects beyond class, and I’ve led community efforts shaped by where I come from and what I care about.
+      </p>
+
+      <p>
+        Still, not everything I do is on a screen. I love being outside,<span className="text-cyan-400">hiking</span>, <span className="text-cyan-400">kayaking</span>, anything that lets me breathe.
+        I enjoy slow mornings and making <span className="bg-emerald-700/70 text-white px-2 py-0.5 rounded">matcha</span> (the whisking is calming), and I’m always trying to pick up a new language.
+        I like sharing my <span className="bg-yellow-800/70 text-white px-2 py-0.5 rounded">culture</span> and <span className="bg-orange-600/70 text-white px-2 py-0.5 rounded">food</span>,
+        and one of my favorite things is <span className="text-pink-400">karaoke night</span> with my friends.
+        Oh, and I definitely love <span className="bg-yellow-400 text-black px-2 py-0.5 rounded">cats</span> 🐱.
+      </p>
+
+    </div>
+  </motion.div>
+</section>
+
 
       <section id="story" className="py-20 px-6 max-w-5xl mx-auto">
         <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -395,7 +413,7 @@ export default function Home() {
           <GitHubIcon />
         <span className="text-sm">Code</span>
           </motion.a>
-          <motion.a href="https://youtu.be/bq7jYzlqsXQ" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <motion.a href="https://youtu.be/hPRFX3Bhpf4" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <YouTubeIcon />
           <span className="text-sm">Demo</span>
           </motion.a>
@@ -458,7 +476,7 @@ export default function Home() {
           <GitHubIcon />
           <span className="text-sm">Code</span>
           </motion.a>
-          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_7" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <motion.a href="https://youtu.be/eyNzqPMY93o" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <YouTubeIcon />
           <span className="text-sm">Demo</span>
           </motion.a>
