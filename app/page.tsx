@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import Particles from "react-tsparticles";
+import { Heart, Sparkles, Coffee, Palette, Code, Lightbulb, Star, Zap, Smile, Camera } from 'lucide-react';
 import { loadFull } from "tsparticles";
 import { BsCodeSlash, BsGear } from "react-icons/bs";
 import { FaDatabase, FaBook, FaGraduationCap, FaLanguage } from "react-icons/fa";
@@ -108,154 +108,142 @@ export default function Home() {
     await loadFull(engine);
   };
 
+
+
+
+
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen">
-      <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-lg z-50">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
-            Salman Aji
-          </h1>
-          <div className="hidden md:flex space-x-6">
-            {sections.map(({ id, label }) => (
+<div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white min-h-screen">
+  <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-lg z-50">
+    <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text">
+        Salman Aji
+      </h1>
+      <div className="hidden md:flex space-x-6">
+        {sections.map(({ id, label }) => (
+          <motion.div
+            key={id}
+            className="relative"
+            variants={navLinkVariants}
+            animate={activeSection === id ? "active" : "inactive"}
+          >
+            <ScrollLink
+              to={id}
+              smooth={true}
+              duration={500}
+              spy={true}
+              activeClass="active"
+              offset={scrollOffset}
+              onSetActive={handleSetActive}
+              className="text-gray-200 hover:text-cyan-400 transition duration-300 font-medium cursor-pointer"
+            >
+              {label}
               <motion.div
-                key={id}
-                className="relative"
-                variants={navLinkVariants}
+                className="absolute bottom-0 left-0 h-0.5 bg-cyan-400"
+                variants={underlineVariants}
                 animate={activeSection === id ? "active" : "inactive"}
-              >
-                <ScrollLink
-                  to={id}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  activeClass="active"
-                  offset={scrollOffset}
-                  onSetActive={handleSetActive}
-                  className="text-gray-200 hover:text-cyan-400 transition duration-300 font-medium cursor-pointer"
-                >
-                  {label}
-                  <motion.div
-                    className="absolute bottom-0 left-0 h-0.5 bg-cyan-400"
-                    variants={underlineVariants}
-                    animate={activeSection === id ? "active" : "inactive"}
-                    whileHover="active"
-                  />
-                </ScrollLink>
-              </motion.div>
-            ))}
-          </div>
-          <button className="md:hidden" onClick={toggleMenu}>
-            <svg className="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                whileHover="active"
               />
-            </svg>
-          </button>
-        </div>
-        {isMenuOpen && (
-          <div className="md:hidden px-4 pb-4 space-y-3 bg-black/90">
-            {sections.map(({ id, label }) => (
+            </ScrollLink>
+          </motion.div>
+        ))}
+      </div>
+      <button className="md:hidden" onClick={toggleMenu}>
+        <svg className="w-6 h-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+          />
+        </svg>
+      </button>
+    </div>
+    {isMenuOpen && (
+      <div className="md:hidden px-4 pb-4 space-y-3 bg-black/90">
+        {sections.map(({ id, label }) => (
+          <motion.div
+            key={id}
+            className="relative"
+            variants={navLinkVariants}
+            animate={activeSection === id ? "active" : "inactive"}
+          >
+            <ScrollLink
+              to={id}
+              smooth={true}
+              duration={500}
+              spy={true}
+              activeClass="active"
+              offset={scrollOffset}
+              onSetActive={handleSetActive}
+              className="block py-2 text-gray-200 hover:text-cyan-400 transition duration-200"
+              onClick={toggleMenu}
+            >
+              {label}
               <motion.div
-                key={id}
-                className="relative"
-                variants={navLinkVariants}
+                className="absolute bottom-0 left-0 h-0.5 bg-cyan-400"
+                variants={underlineVariants}
                 animate={activeSection === id ? "active" : "inactive"}
-              >
-                <ScrollLink
-                  to={id}
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  activeClass="active"
-                  offset={scrollOffset}
-                  onSetActive={handleSetActive}
-                  className="block py-2 text-gray-200 hover:text-cyan-400 transition duration-200"
-                  onClick={toggleMenu}
-                >
-                  {label}
-                  <motion.div
-                    className="absolute bottom-0 left-0 h-0.5 bg-cyan-400"
-                    variants={underlineVariants}
-                    animate={activeSection === id ? "active" : "inactive"}
-                    whileHover="active"
-                  />
-                </ScrollLink>
-              </motion.div>
-            ))}
-          </div>
-        )}
-      </nav>
-      <section id="home" className="h-screen flex items-center px-6 md:px-20 relative overflow-hidden bg-transparent">
-  <Particles
-    id="particles"
-    init={particlesInit}
-    options={{
-      particles: {
-        color: { value: "#00FFFF" },
-        links: { color: "#00FFFF", enable: true, opacity: 0.3 },
-        move: { enable: true, speed: 1.2 },
-        size: { value: 2 },
-        number: { value: 50 },
-      },
-      background: { color: { value: "transparent" } },
-    }}
-    className="absolute inset-0 -z-10"
-  />
+                whileHover="active"
+              />
+            </ScrollLink>
+          </motion.div>
+        ))}
+      </div>
+    )}
+  </nav>
+  <section id="home" className="h-screen flex items-center px-6 md:px-20 relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/60 via-black/80 to-purple-900/60 z-0"></div>
+    <motion.div
+      className="flex flex-col-reverse md:flex-row justify-between items-center w-full max-w-6xl mx-auto gap-12 z-10"
+      variants={fadeInUp}
+      initial="hidden"
+      animate="visible"
+    >
+      <div className="text-center md:text-left flex flex-col items-center md:items-start flex-1 max-w-3xl">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 to-pink-500 text-transparent bg-clip-text">
+          Hi, I'm Salman
+        </h1>
+        <p className="mt-2 text-lg text-gray-400 italic">/sal·man/</p>
+        <p className="mt-6 text-xl md:text-2xl text-gray-200 leading-snug">
+          A rising junior studying <span className="text-cyan-400 font-semibold">Computer Science</span> & <span className="text-cyan-400 font-semibold">Applied Math</span> @ Brown University.
+        </p>
+        <p className="mt-2 text-lg md:text-xl text-gray-400">
+          I love building things that make opportunities more accessible to others.
+        </p>
+        <TypeAnimation
+          sequence={[
+            "Cout << I love cats 🐱!'; ",
+            2000,
+            "for (dream in life) { build(dream); }",
+            2000,
+            "while (!success) tryAgain();",
+            2000,
+          ]}
+          wrapper="span"
+          speed={40}
+          className="mt-4 text-cyan-400 text-base md:text-lg font-medium"
+          repeat={Infinity}
+        />
+        <a
+          href="/CV.pdf"
+          className="mt-8 inline-block px-7 py-3 text-lg bg-cyan-600 hover:bg-cyan-700 text-white rounded-full transition shadow-lg hover:shadow-cyan-500/50"
+        >
+          View My Resume
+        </a>
+      </div>
+      <motion.div whileHover={{ scale: 1.05 }} className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] mt-8 md:mt-0">
+        <Image
+          src="/profile.jpg"
+          fill
+          className="rounded-full object-cover border-4 border-cyan-500 shadow-xl"
+          alt="Salman Aji"
+        />
+      </motion.div>
+    </motion.div>
+  </section>
 
-  <motion.div
-    className="flex flex-col-reverse md:flex-row justify-between items-center w-full max-w-6xl mx-auto gap-12"
-    variants={fadeInUp}
-    initial="hidden"
-    animate="visible"
-  >
-    {/* Left: Details */}
-    <div className="text-center md:text-left flex flex-col items-center md:items-start flex-1 max-w-3xl">
-  <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 to-pink-500 text-transparent bg-clip-text">
-    Hi, I'm Salman
-  </h1>
-  <p className="mt-2 text-lg text-gray-400 italic">/sal·man/</p>
 
-  <p className="mt-6 text-xl md:text-2xl text-gray-200 leading-snug">
-    A rising junior studying <span className="text-cyan-400 font-semibold">Computer Science</span> & <span className="text-cyan-400 font-semibold">Applied Math</span> @ Brown University.
-  </p>
-  <p className="mt-2 text-lg md:text-xl text-gray-400">
-  I love building things that make opportunities more accessible to others.
-  </p>
-
-  <TypeAnimation
-    sequence={[
-      "Cout << I love cats 🐱!'; ", 2000,
-      "for (dream in life) { build(dream); }", 2000,
-      "while (!success) tryAgain();", 2000
-    ]}
-    wrapper="span"
-    speed={40}
-    className="mt-4 text-cyan-400 text-base md:text-lg font-medium"
-    repeat={Infinity}
-  />
-
-  <a
-    href="/CV.pdf"
-    className="mt-8 inline-block px-7 py-3 text-lg bg-cyan-600 hover:bg-cyan-700 text-white rounded-full transition shadow-lg hover:shadow-cyan-500/50"
-  >
-    View My Resume
-  </a>
-</div>
-
-<motion.div whileHover={{ scale: 1.05 }} className="relative w-80 h-80 md:w-[28rem] md:h-[28rem] mt-8 md:mt-0">
-  <Image
-    src="/profile.jpg"
-    fill
-    className="rounded-full object-cover border-4 border-cyan-500 shadow-xl"
-    alt="Salman Aji"
-  />
-</motion.div>
-
-  </motion.div>
-</section>
 
 
 <section id="about" className="py-20 px-6 max-w-5xl mx-auto">
@@ -292,12 +280,12 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-8 text-cyan-400">My Story</h2>
           <div className="text-lg leading-relaxed text-gray-200">
             <p>
-            The first time I wrote "Hello, World," I was in 10th grade, surrounded by a world that felt like it was falling apart. War had stolen the rhythm of my life: schools closed, power gone, plans abandoned. But in that quiet moment, alone with a borrowed laptop and a low battery, I typed two words and hit run. The screen replied: Hello, World. It was the first time in a long time something answered back.
+            The first time I wrote "Hello, World," I was in 10th grade, surrounded by a world that felt like it was falling apart. War had stolen the rhythm of my life: schools closed, power gone, plans abandoned. But in that quiet moment, alone with a my laptop, I typed two words and hit run. The screen replied: Hello, World. It was the first time in a long time something answered back.
             That moment changed me. I realized I could still build something, yeah it was small, but it was mine. When everything around me was uncertain, coding made sense. It wasn’t just about solving problems, it was about finding stability. It was the first time I felt in control, the first time I saw a future I could shape with my own hands
             <br></br>
             <br></br>
             Since then, I haven’t stopped. I code because it gave me my voice back. I code because it helps me build something better, for myself, for the people I care about, and even for those I may never meet. Every line of code is my way of saying I still believe in the future.
-            I code because it makes me feel alive. Because when the world said no, I learned to build my own yes. That feeling has stayed with me. And I know it always will.
+            Because when the world said no, I learned to build my own yes. That feeling has stayed with me. And I know it always will.
             </p>
           </div>
         </motion.div>
