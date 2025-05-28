@@ -304,45 +304,97 @@ export default function Home() {
       </section>
 
       <section id="experience" className="py-20 px-6 bg-gray-900/50">
-        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <h2 className="text-4xl font-bold text-center mb-10 text-cyan-400">Experience</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold text-cyan-400">Incoming Research Assistant, VectraFlow Project</h3>
-              <p className="text-sm text-gray-400">Brown University • May 2025 - Present</p>
-              <ul className="list-disc ml-5 mt-3 space-y-2 text-sm text-gray-200">
-                <li>Awarded Brown’s UTRA to work on an AI-augmented database system processing 50,000+ patient records.</li>
-                <li>Collaborate with Rhode Island Hospital to reduce cohort selection time by 90% using LLM-based operators.</li>
-                <li>Manage AI agents for query correction and data transformation.</li>
-              </ul>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold text-cyan-400">Head Teaching Assistant, AI Course</h3>
-              <p className="text-sm text-gray-400">Brown University • Feb 2025 - Present</p>
-              <ul className="list-disc ml-5 mt-3 space-y-2 text-sm text-gray-200">
-                <li>Led hiring of TAs from 200+ applicants and designed course materials for 200+ students.</li>
-                <li>Facilitated weekly 2-hour lab sessions, debugging, and Q&A to enhance student learning.</li>
-              </ul>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold text-cyan-400">Research Assistant, Inverse Multiagent Learning</h3>
-              <p className="text-sm text-gray-400">Brown University • Nov 2024 - May 2025</p>
-              <ul className="list-disc ml-5 mt-3 space-y-2 text-sm text-gray-200">
-                <li>Collaborated with Prof. Amy Greenwald on modeling Spanish electricity markets using Inverse Reinforcement Learning.</li>
-                <li>Achieved 2.02x lower MSE compared to ARIMA, enhancing forecasting accuracy.</li>
-              </ul>
-            </motion.div>
-            <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <h3 className="text-xl font-semibold text-cyan-400">Data Analyst & Research Intern</h3>
-              <p className="text-sm text-gray-400">HousingWorks RI • Feb 2024 - Aug 2024</p>
-              <ul className="list-disc ml-5 mt-3 space-y-2 text-sm text-gray-200">
-                <li>Automated data scraping and analysis of U.S. Census datasets, reducing task time by 70%.</li>
-                <li>Contributed to the 2024 Housing Fact Book, influencing Rhode Island’s housing policy.</li>
-              </ul>
-            </motion.div>
-          </div>
-        </motion.div>
-      </section>
+  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+    <h2 className="text-4xl font-bold text-center mb-10 text-cyan-400">Experience</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+      {/* VectraFlow */}
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <h3 className="text-xl font-semibold text-cyan-400">Incoming Research Assistant, VectraFlow Project</h3>
+        <p className="text-sm text-gray-400">Brown University • May 2025 - Present</p>
+        <ul className="list-disc ml-5 mt-3 space-y-2 text-sm text-gray-200">
+          <li>Awarded Brown’s UTRA to work on an AI-augmented database system processing 50,000+ patient records.</li>
+          <li>Collaborate with Rhode Island Hospital to reduce cohort selection time by 90% using LLM-based operators.</li>
+          <li>Manage AI agents for query correction and data transformation.</li>
+        </ul>
+        <div className="mt-6 text-center">
+          <a
+            href="https://brown-db.github.io/projects/vectraflow"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base md:text-lg font-semibold text-cyan-300 hover:underline"
+          >
+            🔗 Explore the VectraFlow Project →
+          </a>
+        </div>
+      </motion.div>
+
+      {/* Head TA */}
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <h3 className="text-xl font-semibold text-cyan-400">Head Teaching Assistant, AI Course</h3>
+        <p className="text-sm text-gray-400">Brown University • Feb 2025 - Present</p>
+        <ul className="list-disc ml-5 mt-3 space-y-2 text-sm text-gray-200">
+          <li>Led hiring of TAs from 200+ applicants and designed course materials for 200+ students.</li>
+          <li>Facilitated weekly 2-hour lab sessions, debugging, and Q&A to enhance student learning.</li>
+        </ul>
+        <div className="mt-6 text-center">
+          <a
+            href="https://browncsci410.github.io/s25-website/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base md:text-lg font-semibold text-cyan-300 hover:underline"
+          >
+            📘 Visit the Course Website →
+          </a>
+        </div>
+      </motion.div>
+
+      {/* Inverse RL Research */}
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <h3 className="text-xl font-semibold text-cyan-400">Research Assistant, Inverse Multiagent Learning</h3>
+        <p className="text-sm text-gray-400">Brown University • Nov 2024 - May 2025</p>
+        <ul className="list-disc ml-5 mt-3 space-y-2 text-sm text-gray-200">
+          <li>Collaborated with Prof. Amy Greenwald on modeling Spanish electricity markets using Inverse Reinforcement Learning.</li>
+          <li>Achieved 2.02x lower MSE compared to ARIMA, enhancing forecasting accuracy.</li>
+        </ul>
+        <div className="mt-6 text-center">
+          <a
+            href="https://openreview.net/forum?id=JzvIWvC9MG"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base md:text-lg font-semibold text-cyan-300 hover:underline"
+          >
+            📄 Read the Research Paper →
+          </a>
+        </div>
+      </motion.div>
+
+      {/* HousingWorks */}
+      <motion.div variants={cardVariants} whileHover="hover" className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <h3 className="text-xl font-semibold text-cyan-400">Data Analyst & Research Intern</h3>
+        <p className="text-sm text-gray-400">HousingWorks RI • Feb 2024 - Aug 2024</p>
+        <ul className="list-disc ml-5 mt-3 space-y-2 text-sm text-gray-200">
+          <li>Automated data scraping and analysis of U.S. Census datasets, reducing task time by 70%.</li>
+          <li>Contributed to the 2024 Housing Fact Book, influencing Rhode Island’s housing policy.</li>
+        </ul>
+        <div className="mt-6 text-center">
+          <a
+            href="https://d337wih8hx5yft.cloudfront.net/images/Publications/HWRI_HFB24.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-base md:text-lg font-semibold text-cyan-300 hover:underline"
+          >
+            🏠 View the Annual Fact Book 2024 →
+          </a>
+        </div>
+      </motion.div>
+
+    </div>
+  </motion.div>
+</section>
+
+
+
 
       <section id="projects" className="py-20 px-6 max-w-6xl mx-auto">
       
@@ -370,10 +422,6 @@ export default function Home() {
           <motion.a href="https://github.com/saji802/Blackjack_Assistant" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <GitHubIcon />
           <span className="text-sm">Code</span>
-          </motion.a>
-          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
-            <YouTubeIcon />
-<span className="text-sm">Demo</span>
           </motion.a>
         </div>
         <p className="text-sm text-gray-300 mt-4">Python, roboflow, OpenCV • March - May 2025</p>
@@ -434,10 +482,7 @@ export default function Home() {
           <GitHubIcon />
           <span className="text-sm">Code</span>
           </motion.a>
-          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_5" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
-          <YouTubeIcon />
-          <span className="text-sm">Demo</span>
-          </motion.a>
+
         </div>
         <p className="text-sm text-gray-300 mt-4">TypeScript, Firebase, Next.js, Playwright, Clerk • Jan - Feb 2024</p>
         <ul className="mt-2 text-sm text-gray-200 list-disc ml-5">
