@@ -388,11 +388,11 @@ export default function Home() {
         <Image src="/projects/Go.png" width={400} height={200} className="w-full h-90 object-contain rounded-lg mb-4" alt="Multi-Agent Framework for Go Gameplay" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Multi-Agent Framework for Go Gameplay</h3>
         <div className="flex gap-6 mt-2">
-          <motion.a href="https://github.com/saji802/go-gameplay" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <motion.a href="https://github.com/saji802/Go-Agents" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <GitHubIcon />
           <span className="text-sm">Code</span>
           </motion.a>
-          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_3" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <motion.a href="https://youtube.com/shorts/dg_esbC7Gro?feature=share" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
             <YouTubeIcon />
             <span className="text-sm">Demo</span>
           </motion.a>
@@ -409,7 +409,7 @@ export default function Home() {
         <Image src="/projects/OS.png" width={400} height={200} className="w-full h-90 object-cover rounded-lg mb-4" alt="Compact Operating System" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Compact Operating System</h3>
         <div className="flex gap-6 mt-2">
-          <motion.a href="https://github.com/saji802/compact-os" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <motion.a href="https://github.com/saji802/my_OS" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <GitHubIcon />
         <span className="text-sm">Code</span>
           </motion.a>
@@ -430,7 +430,7 @@ export default function Home() {
         <Image src="/projects/Vocablo.png" width={400} height={200} className="w-full h-90 object-contain rounded-lg mb-4" alt="Vocablo" />
         <h3 className="text-xl font-semibold text-cyan-400 mb-2">Vocablo: Vocabulary Tracker Web App</h3>
         <div className="flex gap-6 mt-2">
-          <motion.a href="https://github.com/saji802/vocablo" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <motion.a href="https://github.com/saji802/Vocablo" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <GitHubIcon />
           <span className="text-sm">Code</span>
           </motion.a>
@@ -455,7 +455,7 @@ export default function Home() {
           <GitHubIcon />
           <span className="text-sm">Code</span>
           </motion.a>
-          <motion.a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID_6" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+          <motion.a href="https://youtu.be/agKCuqmHyMQ" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <YouTubeIcon />
           <span className="text-sm">Demo</span>
           </motion.a>
