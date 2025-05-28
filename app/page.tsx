@@ -482,6 +482,10 @@ export default function Home() {
           <GitHubIcon />
           <span className="text-sm">Code</span>
           </motion.a>
+          <motion.a href="https://www.youtube.com/watch?v=fjDKPDuUjiw" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+            <YouTubeIcon />
+            <span className="text-sm">Demo</span>
+          </motion.a>
 
         </div>
         <p className="text-sm text-gray-300 mt-4">TypeScript, Firebase, Next.js, Playwright, Clerk • Jan - Feb 2024</p>
