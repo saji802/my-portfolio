@@ -539,80 +539,118 @@ export default function Home() {
 
 
 
-      <section id="skills" className="py-20 px-6 bg-gray-900/50">
-        <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <h2 className="text-4xl font-bold text-center mb-10 text-cyan-400">Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
-                  <BsCodeSlash size={24} className="text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-cyan-400">Programming Languages</h3>
-              </div>
-              <p className="text-sm text-gray-200">
-                Python, Java, C/C++, JavaScript, HTML/CSS, R, Racket
-              </p>
-            </div>
-            <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
-                  <BsGear size={24} className="text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-cyan-400">Frameworks</h3>
-              </div>
-              <p className="text-sm text-gray-200">
-                React, TypeScript, Playwright, Firebase, Next.js
-              </p>
-            </div>
-            <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
-                  <FaDatabase size={24} className="text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-cyan-400">Databases</h3>
-              </div>
-              <p className="text-sm text-gray-200">
-                SQLite, MongoDB, Firebase
-              </p>
-            </div>
-            <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
-                  <FaBook size={24} className="text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-cyan-400">Libraries</h3>
-              </div>
-              <p className="text-sm text-gray-200">
-                Numpy, Pandas, TensorFlow, PyTorch, Scikit-learn, OpenCV, CVXPY
-              </p>
-            </div>
-            <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
-                  <FaGraduationCap size={24} className="text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-cyan-400">Relevant College Courses</h3>
-              </div>
-              <p className="text-sm text-gray-200">
-                Artificial Intelligence, Software Engineering, Computer Vision, Computer Systems, Machine learning, Deep Learning, Object Oriented Programming, Data Structures & Algorithms
-              </p>
-            </div>
-            <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
-                  <FaLanguage size={24} className="text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-cyan-400">Languages</h3>
-              </div>
-              <p className="text-sm text-gray-200">
-                English (Fluent), Arabic (Native), French (Intermediate)
-              </p>
-            </div>
+<section id="skills" className="py-20 px-6 bg-gray-900/50">
+  <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+    <h2 className="text-4xl font-bold text-center mb-10 text-cyan-400">Skills</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {/* Programming Languages */}
+      <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
+            <BsCodeSlash size={24} className="text-white" />
           </div>
+          <h3 className="text-xl font-semibold text-cyan-400">Programming Languages</h3>
+        </div>
+        <ul className="text-sm text-gray-200 grid grid-cols-2 gap-y-1 list-disc list-inside pl-2">
+          <li>Python</li>
+          <li>Java</li>
+          <li>C/C++</li>
+          <li>JavaScript</li>
+          <li>HTML/CSS</li>
+          <li>R</li>
+          <li>Racket</li>
+        </ul>
+      </div>
 
-        </motion.div>
-      </section>
+      {/* Frameworks */}
+      <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
+            <BsGear size={24} className="text-white" />
+          </div>
+          <h3 className="text-xl font-semibold text-cyan-400">Frameworks</h3>
+        </div>
+        <ul className="text-sm text-gray-200 grid grid-cols-2 gap-y-1 list-disc list-inside pl-2">
+          <li>React</li>
+          <li>Next.js</li>
+          <li>TypeScript</li>
+          <li>Firebase</li>
+          <li>Playwright</li>
+        </ul>
+      </div>
+
+      {/* Databases */}
+      <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
+            <FaDatabase size={24} className="text-white" />
+          </div>
+          <h3 className="text-xl font-semibold text-cyan-400">Databases</h3>
+        </div>
+        <ul className="text-sm text-gray-200 grid grid-cols-2 gap-y-1 list-disc list-inside pl-2">
+          <li>SQLite</li>
+          <li>MongoDB</li>
+          <li>Firebase</li>
+        </ul>
+      </div>
+
+      {/* Libraries */}
+      <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
+            <FaBook size={24} className="text-white" />
+          </div>
+          <h3 className="text-xl font-semibold text-cyan-400">Libraries</h3>
+        </div>
+        <ul className="text-sm text-gray-200 grid grid-cols-2 gap-y-1 list-disc list-inside pl-2">
+          <li>NumPy</li>
+          <li>Pandas</li>
+          <li>TensorFlow</li>
+          <li>PyTorch</li>
+          <li>Scikit-learn</li>
+          <li>OpenCV</li>
+          <li>CVXPY</li>
+        </ul>
+      </div>
+
+      {/* Courses */}
+      <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
+            <FaGraduationCap size={24} className="text-white" />
+          </div>
+          <h3 className="text-xl font-semibold text-cyan-400">Relevant College Courses</h3>
+        </div>
+        <ul className="text-sm text-gray-200 grid grid-cols-2 gap-y-1 list-disc list-inside pl-2">
+          <li>AI</li>
+          <li>Machine Learning</li>
+          <li>Deep Learning</li>
+          <li>Computer Vision</li>
+          <li>Software Engineering</li>
+          <li>Computer Systems</li>
+          <li>OOP</li>
+          <li>Data Structures</li>
+        </ul>
+      </div>
+
+      {/* Spoken Languages */}
+      <div className="p-6 bg-gray-800 rounded-xl shadow-lg">
+        <div className="flex items-center mb-4">
+          <div className="w-10 h-10 flex items-center justify-center bg-cyan-600 rounded-full mr-3">
+            <FaLanguage size={24} className="text-white" />
+          </div>
+          <h3 className="text-xl font-semibold text-cyan-400">Languages</h3>
+        </div>
+        <ul className="text-sm text-gray-200 grid grid-cols-2 gap-y-1 list-disc list-inside pl-2">
+          <li>Arabic (Native)</li>
+          <li>English (Fluent)</li>
+          <li>French (Intermediate)</li>
+        </ul>
+      </div>
+    </div>
+  </motion.div>
+</section>
+
 
       <section id="contact" className="py-20 px-6 max-w-5xl mx-auto">
         <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
