@@ -410,6 +410,10 @@ export default function Home() {
           <motion.a href="https://github.com/saji802/Blackjack_Assistant" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
           <GitHubIcon />
           <span className="text-sm">Code</span>
+          <motion.a href="https://youtu.be/bVmlFPspG5c" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }} className="flex items-center gap-1 text-gray-400 hover:text-cyan-300 transition">
+            <YouTubeIcon />
+            <span className="text-sm">Demo</span>
+          </motion.a>
           </motion.a>
         </div>
         <p className="text-sm text-gray-300 mt-4">Python, roboflow, OpenCV • March - May 2025</p>
