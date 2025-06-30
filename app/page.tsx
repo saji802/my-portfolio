@@ -252,7 +252,7 @@ export default function Home() {
     <div className="text-lg leading-relaxed text-gray-200 space-y-6">
 
       <p>
-        I’m <span className="font-semibold text-white">Salman Aji</span>, a Syrian first-generation student at
+        I’m <span className="font-semibold text-white">Salman Aji</span>, a <span className="bg-blue-700/70 text-white px-2 py-0.5 rounded ml-1 mr-1">Syrian first-generation</span> student at
         <span className="bg-purple-700/70 text-white px-2 py-0.5 rounded ml-1 mr-1">Brown University</span>,
         studying <span className="bg-green-700/70 text-white px-2 py-0.5 rounded">Computer Science</span> and <span className="bg-green-800/70 text-white px-2 py-0.5 rounded">Applied Math</span>.
       </p>
@@ -285,7 +285,7 @@ export default function Home() {
             <br></br>
             <br></br>
             Since then, I haven’t stopped. I code because it gave me my voice back. I code because it helps me build something better, for myself, for the people I care about, and even for those I may never meet. Every line of code is my way of saying I still believe in the future.
-            Because when the world said no, I learned to build my own yes. That feeling has stayed with me. And I know it always will.
+            Because when the world said no, I learned to build my own yes. That feeling has stayed with me, and I know it always will.
             </p>
           </div>
         </motion.div>
@@ -576,6 +576,7 @@ export default function Home() {
           <li>TypeScript</li>
           <li>Firebase</li>
           <li>Playwright</li>
+          <li>LangChain</li>
         </ul>
       </div>
 
@@ -610,6 +611,7 @@ export default function Home() {
           <li>Scikit-learn</li>
           <li>OpenCV</li>
           <li>CVXPY</li>
+          <li>vLLM</li>
         </ul>
       </div>
 
